@@ -1,5 +1,8 @@
 node_modules
 
+### Secrets ###
+secret_key.txt
+
 ### Django ###
 *.log
 *.pot
