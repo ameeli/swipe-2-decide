@@ -1,3 +1,8 @@
 from django.shortcuts import render
 
-# Create your views here.
+# Create mediate/templates/mediate/index.html and have React try to render
+# onto the root of that page?
+
+
+def index(request):
+    return render(request, 'mediate/index.html')
