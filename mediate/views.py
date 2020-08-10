@@ -1,8 +1,13 @@
-from django.shortcuts import render
+from rest_framework.views import APIView
+from rest_framework.response import Response
 
-# Create mediate/templates/mediate/index.html and have React try to render
-# onto the root of that page?
+temp = [
+    {'id': 1, 'name': 'cafe', 'stars': 4, 'price': 2, 'review_count': 100},
+    {'id': 2, 'name': 'diner', 'stars': 3, 'price': 1, 'review_count': 200},
+    {'id': 3, 'name': 'bakery', 'stars': 5, 'price': 3, 'review_count': 50}
+]
 
 
-def index(request):
-    return render(request, 'mediate/index.html')
+class ListRestaurants(APIView):
+    def get(self, request, format=None):
+        return Response(temp)
