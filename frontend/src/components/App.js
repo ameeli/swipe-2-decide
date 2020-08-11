@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("api/mediate")
+    fetch("api/find_restaurants/")
       .then((response) => {
         if (response.status > 400) {
           return this.setState(() => {
