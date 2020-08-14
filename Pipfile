@@ -9,6 +9,8 @@ ipython = "*"
 [packages]
 djangorestframework = "*"
 coverage = "*"
+requests = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.8"
