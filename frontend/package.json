@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js",
-    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js"
+    "watch": "npm-watch",
+    "build": "webpack --mode production ./src/index.js --output ./static/frontend/main.js",
+    "dev": "webpack --mode development ./src/index.js --output ./static/frontend/main.js"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +20,16 @@
     "react-dom": "^16.13.1",
     "webpack": "^4.44.1",
     "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "npm-watch": "^0.7.0"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
   }
 }
