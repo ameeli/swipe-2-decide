@@ -28,14 +28,17 @@ def get_restaurants(price_range, location_data):
 
 
 def get_essential_info(business_list):
-    ess_info = {}
+    businesses = []
 
     for business in business_list:
-        ess_info[business['name']] = {
+        ess_info = {
+            'id': business['id'],
+            'name': business['name'],
             'review_count': business['review_count'],
             'rating': business['rating'],
             'is_open': not business['is_closed'],
             'yelp_page': business['url'],
         }
+        businesses.append(ess_info)
 
-    return ess_info
+    return businesses

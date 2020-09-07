@@ -63,18 +63,24 @@ business_list = [
 class TestRestaurants(unittest.TestCase):
     def setUp(self):
         self.business_list = business_list
-        self.ess_info = {
-            'Business One': {
+        self.ess_info = [
+            {
+                'id': 'id1',
+                'name': 'Business One',
                 'review_count': 714,
                 'rating': 4,
                 'is_open': True,
-                'yelp_page': 'https://www.yelp.com/biz/1'},
-            'Business Two': {
+                'yelp_page': 'https://www.yelp.com/biz/1'
+            },
+            {
+                'id': 'id2',
+                'name': 'Business Two',
                 'review_count': 8925,
                 'rating': 4.6,
                 'is_open': False,
-                'yelp_page': 'https://www.yelp.com/biz/2'},
-        }
+                'yelp_page': 'https://www.yelp.com/biz/2'
+            },
+        ]
 
     def test_get_essential_info(self):
         ess_info = get_essential_info(self.business_list)
