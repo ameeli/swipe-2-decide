@@ -33,10 +33,16 @@ class App extends Component {
       });
   }
 
+  handlePriceRangeChange = (changeEvent) => {
+    this.setState({ priceRange: changeEvent.target.value });
+  };
+
   render() {
     return (
       <React.Fragment>
-        <PriceRange />
+        <PriceRange onChange={this.handlePriceRangeChange} />
+        {this.state.priceRange}
+        {/*
         <ul>
           {this.state.restaurants.map((restaurant) => {
             return (
@@ -46,6 +52,7 @@ class App extends Component {
             );
           })}
         </ul>
+*/}
       </React.Fragment>
     );
   }
